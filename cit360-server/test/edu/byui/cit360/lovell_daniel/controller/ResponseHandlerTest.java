@@ -6,15 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-import org.junit.Before;
 import org.junit.Test;
 
 public class ResponseHandlerTest {
-
-	@Before
-	public void setUp() throws Exception {
-		ResponseHandler responseHandler = new ResponseHandler();
-	}
 
 	@Test
 	public void testHandleIt() {

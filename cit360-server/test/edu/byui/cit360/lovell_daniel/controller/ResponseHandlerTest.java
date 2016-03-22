@@ -4,8 +4,6 @@ import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-
 import org.junit.Test;
 
 public class ResponseHandlerTest {
@@ -16,15 +14,16 @@ public class ResponseHandlerTest {
 		//populate test cases
 		ArrayList<String[]> tests = new ArrayList<>();
 		tests.add(new String[] {"Bob", "!userExists"});
-		tests.add(new String[] {"Daniel", "{sample}"});
+		tests.add(new String[] {"Daniel", "success"});
 		tests.add(new String[] {"", "!userExists"});
 		
 		//test
 		for (String[] test : tests) {
-			String expResult = "!userExists";
+			System.out.println("***Test Case:"+test[0]+","+test[1]+"***");
+			String expResult = test[1];
 			String result = new ResponseHandler().handleIt(new ArrayList<String> (Arrays.asList(test)));
 			assertEquals(expResult, result);
-			System.out.println("Test Case 1");
+			System.out.println("***Passed***\n");
 		}
 		
 		

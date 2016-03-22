@@ -28,7 +28,7 @@ public class ResponseHandlerTest {
 		//test
 		for (String[] test : tests) {
 			String expResult = "!userExists";
-			String result = new ResponseHandler().handleIt(Collections.addAll(result, test));
+			String result = new ResponseHandler().handleIt(new ArrayList<String> (Arrays.asList(test)));
 			assertEquals(expResult, result);
 			System.out.println("Test Case 1");
 		}

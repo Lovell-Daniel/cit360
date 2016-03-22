@@ -1,5 +1,7 @@
 package edu.byui.cit360.lovell_daniel.controller;
 
+import java.util.ArrayList;
+
 public abstract class Handler {
-	abstract void handleIt();
+	abstract String handleIt(ArrayList<String> data);
 }

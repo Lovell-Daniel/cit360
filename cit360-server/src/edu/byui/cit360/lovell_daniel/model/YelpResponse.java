@@ -5,9 +5,18 @@ import java.time.ZonedDateTime;
 
 public class YelpResponse implements Serializable{
 
+	private int id;
 	private ZonedDateTime time;
 	private String json;
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public ZonedDateTime getTime() {
 		return time;
 	}

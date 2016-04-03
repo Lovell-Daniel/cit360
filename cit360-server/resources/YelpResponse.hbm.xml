@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.byui.cit360.lovell_daniel.model.YelpResponse" table="YELPRESPONSE">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="generated" />
+        </id>
+        <property name="time" type="java.time.ZonedDateTime">
+            <column name="TIME" />
+        </property>
+        <property name="json" type="java.lang.String">
+            <column name="JSON" />
+        </property>
+    </class>
+</hibernate-mapping>

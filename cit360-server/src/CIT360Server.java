@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 import edu.byui.cit360.lovell_daniel.controller.ApplicationController;
+import edu.byui.cit360.lovell_daniel.model.HibernateUtility;
 
 public class CIT360Server {
 

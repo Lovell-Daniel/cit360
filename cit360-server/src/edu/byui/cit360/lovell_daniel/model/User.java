@@ -5,8 +5,17 @@ import java.util.ArrayList;
 
 public class User implements Serializable {
 	
+	private int id;
 	private String name;
 	private ArrayList<YelpResponse> responses;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

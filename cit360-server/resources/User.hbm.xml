@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="edu.byui.cit360.lovell_daniel.model.User" table="USER">
+        <id name="name" type="java.lang.String">
+            <column name="NAME" />
+            <generator class="generated" />
+        </id>
+        <list name="responses" inverse="false" table="YELPRESPONSE" lazy="true" access="field">
+            <key>
+                <column name="NAME" />
+            </key>
+            <list-index></list-index>
+            <one-to-many class="edu.byui.cit360.lovell_daniel.model.YelpResponse" />
+        </list>
+    </class>
+</hibernate-mapping>

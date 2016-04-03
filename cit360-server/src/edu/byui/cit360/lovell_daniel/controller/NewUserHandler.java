@@ -3,19 +3,32 @@ package edu.byui.cit360.lovell_daniel.controller;
 import java.util.ArrayList;
 import java.util.HashSet;
 
+import org.hibernate.Session;
+
 import edu.byui.cit360.lovell_daniel.model.DummyData;
+import edu.byui.cit360.lovell_daniel.model.HibernateUtility;
 import edu.byui.cit360.lovell_daniel.model.User;
 
 public class NewUserHandler extends Handler {
 
 	@Override
 	String handleIt(ArrayList<String> data) {
+		/*
+		//create database session
+		Session session = HibernateUtility.getSessionFactory().openSession();
+		User user  = new User();
+
+		*/
+		
 		//get name from data
 		String name = data.get(0);
+		
+		
 		
 		//Create dummy data -  REPLACE with query database when available
 		DummyData dummydata = new DummyData();
 		HashSet<User> users = dummydata.createDummyData();
+		
 		
 		//Check if name already exists
 		Boolean nameExists = null;
@@ -30,9 +43,11 @@ public class NewUserHandler extends Handler {
 			}
 		}
 		
+		
 		//create user
 		users.add(new User(name));
 		System.out.println("Created user: "+name);
 		return "success";
+		
 	}
 }

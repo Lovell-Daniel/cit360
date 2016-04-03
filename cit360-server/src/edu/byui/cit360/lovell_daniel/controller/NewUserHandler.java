@@ -6,7 +6,6 @@ import java.util.HashSet;
 import org.hibernate.Session;
 
 import edu.byui.cit360.lovell_daniel.model.DummyData;
-import edu.byui.cit360.lovell_daniel.model.HibernateUtility;
 import edu.byui.cit360.lovell_daniel.model.User;
 
 public class NewUserHandler extends Handler {

@@ -1,4 +1,4 @@
-package edu.byui.cit360.lovell_daniel.model;
+package edu.byui.cit360.lovell_daniel.controller;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -8,6 +8,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public final class HibernateUtility {
 	//Bill Pugh thread safe singleton pattern
+	//Example usage: Session session = HibernateUtility.getSessionFactory().openSession();
 	
 	private HibernateUtility() {
 		//prevents unwanted instantiation

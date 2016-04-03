@@ -3,8 +3,10 @@ package edu.byui.cit360.lovell_daniel.model;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class DummyData {
+	
 	public HashSet<User> createDummyData() {
 		ZonedDateTime time1a = ZonedDateTime.now();
 		ZonedDateTime time1b = ZonedDateTime.now();
@@ -34,6 +36,19 @@ public class DummyData {
 		HashSet<User> users = new HashSet<>(2);
 		users.add(new User(user1, lastThree1));
 		users.add(new User(user2, lastThree2));
+		printDummyData(users);
 		return users;
+	}
+	
+	private void printDummyData(HashSet<User> users) {
+		for (User user: users) {
+			System.out.println(user.getName());
+			Iterator<YelpResponse> iterResponses = user.getResponses().iterator();
+			while (iterResponses.hasNext()) {
+				YelpResponse response = iterResponses.next();
+				System.out.println(response.getTime().toString());
+				System.out.println(response.getJson());
+			}
+		}
 	}
 }
